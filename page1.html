@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/materialize.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        /*         
+        body {
+            background: lightpink;
+        } */
+        
+        header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: deeppink;
+            /* background: radial-gradient(circle at left, #8F47B3, #FFB7D5); */
+            text-align: right;
+            padding: 10px;
+        }
+        
+        header img {
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        /* Style the list */
+        
+        ul.tab {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        /* Float the list items side by side */
+        
+        ul.tab li {
+            float: left;
+        }
+        /* Style the links inside the list items */
+        
+        ul.tab li a {
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+        /* Change background color of links on hover */
+        
+        ul.tab li a:hover {
+            background-color: #ddd;
+        }
+        /* Create an active/current tablink class */
+        
+        ul.tab li a:focus,
+        .active {
+            background-color: #ccc;
+        }
+        /* Style the tab content */
+        
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            text-align: left;
+        }
+        
+        .tabcontent {
+            -webkit-animation: fadeEffect 1s;
+            animation: fadeEffect 1s;
+            /* Fading effect takes 1 second */
+        }
+        
+        .tabcontent p {
+            font-size: 20px;
+        }
+        
+        #welcome {
+            /* background: royalblue; */
+            background-image: url("./assets/img/bg_heart.jpg");
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        
+        @-webkit-keyframes fadeEffect {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeEffect {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body class="pink lighten-4">
+    <header>
+        <a href="./index.html" class="btn green">BACK</a>
+        <img src="./assets/img/val-img.jpg" width="40" height="40">
+    </header>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <div class="row">
+                <div class="col s12 m10 l10 offset-m1 offset-l1">
+                    <ul class="tab">
+                        <li><a href="#" class="tablinks" onclick="openCity(event, 'London')">Greetings</a></li>
+                        <li><a href="#" class="tablinks" onclick="openCity(event, 'Paris')">Poem</a></li>
+                        <li><a href="#" class="tablinks" onclick="openCity(event, 'Tokyo')">Other</a></li>
+                    </ul>
+                    <div id="London" class="tabcontent">
+                        <h3>Greetings!</h3>
+                        <p>My Dear Friend,</p><br>
+                        <p>
+                            Hello, Good day! Unang-una sa lahat nais kitang batiin ng Happy<sup>2</sup> Valentines Day 🧡💛💚. You are an amazing girl who never gives up no matter what. A smart, beautiful, outstanding, BFFL you are. You always make my
+                            day, and I love talking to you. You put a smile on my face and you shine with laughter and courage. Even though some may think of you different, you can't be judged. Don't let anyone let you down or put you in a bad mood. Val...
+                            your the best girl a friend could ever have. And I want you know that, <br>You should be proud of who you are and enjoy this day with your love ones and family. Don't forget that your special in any kind of way. I have never
+                            met anyone as incredible as you are. Please don't ever change. Don't ever let bad people get to you. Keep being the bundle of awesomeness that you are. You were the voice of reason that kept drumming into my head that everything
+                            will be fine. And it's true, everything turned out alright. You are empathetic, always watching out for other's well beings. If the world had more people like you. It would definitely be a better place. I want you to know that
+                            you deserve the very best in life, so don't ever settle for less. I want you to know that one someday, one day soon, you will achieve all of your dreams and I will be here to celebrate with you. I want you to know that I've
+                            got your back always. I meant that with all my heart.
+                            <!-- <br><br>
+                            <a href="#" id="btn_more" class="btn green">View More ...</a> -->
+                            <span id="more">
+                            
+                            <br><br> Pasensya kana ito lang ang nakayanan kong system, sana magustuhan mo... Hindi ko 'to ginagawa para lang mapalapit sayo, ginagawa ko 'to para batiin at mapasaya ka sa araw ng mga puso... Happy Valentines Day Ulet Sayo Via Anthonnette P. Lopez... God Bless!
+
+                            <br><br><br><br>
+                            <i>Sincerely Your Dearest Friend, Benru Macatangay</i>
+                            </span>
+                        </p>
+                    </div>
+
+                    <div id="Paris" class="tabcontent">
+                        <h3>Poem</h3>
+                        <h4>"Isa Pa"</h4>
+                        <p>
+                            Isa pa, isa pa <br> Isang beses pa <br> Isa pa, hanggang ako'y makuntento na, <br> Isa pa, isa pa para sa aking ikaliligaya.<br><br> Isa pang tula na ikaw ang inspirasyon <br> Isang tulang damdamin ko'y aking binaon <br> Isang
+                            tulang pinuno ng kaligayaha't pagmamahal <br> Isang tulang di kukupas, tulang tatagal.<br><br> Dahil lahat binubuhos ko nalang sa tula <br> Bawat saknong, taludtod, kataga <br> Lahat ng elemento iisa ang diwa <br> Pinagkaisa
+                            ng pusong makata. <br><br> Kaya isa pa, <br> Isa pang tula na ikaw ang pinaghugutan, <br> Dahil kahit na di sayo umiikot ang mundo ko, <br> Ikaw parin ang gusto kong laman nito. <br><br>
+                        </p>
+                    </div>
+
+                    <div id="Tokyo" class="tabcontent">
+                        <h3>Ano Nga Ba Ang Tunay Na Pag-ibig?</h3>
+                        <div id="box-content">
+                            <p>
+                                Ang Tunay Na Pag-ibig. <br> Marami na ang nagtangka, nagpaliwanag at nagbahagi ng kani-kanilang istorya tungkol sa tunay na pag-ibig. Marami ang nag-akala, naghanap, naghahanap at nakahanap ng tunay nilang pag-ibig ngunit
+                                paano ba natin malalaman ang tunay na pag-ibig? Paano natin malalaman kung ang iyong nararamdaman ay tunay ngang pag-ibig at hindi paghanga, pagnanasa o pagbugso lang ng isang kagandahan/kagwapuhan o pisikal na atraksiyon
+                                lang?
+                            </p>
+                            <br>
+                            <p>
+                                Lahat tayo ay nagmamahal at nais na mahalin, lahat tayo ay nasasaktan at may kakayahang manakit, minsan sa ating buhay lahat tayo ay nabigo ngunit minsan naman'y tayo ang dahilan ng isang pagkabigo. Bakit kahit gaano mo kamahal ang isang tao darating
+                                ang isang panahon na kayo'y hindi magkakasundo? Bakit kahit gaano mo kamahal ang isang tao ay mapahanga at mabibighani ka sa iba? Bakit minsan ay hindi sumasapat ang pag-ibig para mapanatiling walang alitan ang isang samahan?
+                                Bakit minsan kahit alam mong may pagmamahal ka may pagkakataong PARANG nabobored ka o nananawa ka? Hindi man mismo sa kanya o kanyang presensiya kundi sa sitwasyong parang paulit-ulit.
+                            </p>
+                            <br>
+                            <p>
+                                Walang pagsidlan ang kasiyahan ng taong nagmamahal at minamahal; wala kang pakialam sa oras at sa mga taong nasa paligid mo dahil ang importante para sa iyo ay ang samantalahin ang pagkakataon na kayo'y magkasama. Lahat ay kaya mong suwayin, lahat ay
+                                kaya mong tiisin dahil lahat ng para sa iyo ay kaligayahan sa tuwing siya'y iyong kasama. Ang pakiramdam na parang gusto mong pigilan ang pagtakbo ng oras, para hindi ka dalawin ng antok sa tuwing siya'y iyong kausap, parang
+                                mabubusog ka sa kahit na anong ihain sa iyong harapan at ang pananabik na siya'y muling makita kahit na ilang oras pa lang kayong nagkakawalay at kaya mong baguhin ang buo mong pagkatao para sa kanya. Ang lahat ng bagay
+                                ay puno ng pangarap, kasiyahan at kaliwanagan. Ngunit sa sandaling kayo ay subukin ng tadhana at may ulap na nang pag-aalinlangan ang iyong kaisipan dito natin malalaman, masusubukan at masusukat ang tunay na pag-ibig.
+                            </p>
+                            <br>
+                            <p>
+                                Sabi, kung ikaw ay nagmahal at minamahal binigyan mo raw ng karapatan ang taong ito na ikaw ay saktan. Isang kakatwa na kung sino ang labis mong mahal siya rin ay may kakayahan na labis kang saktan, kung sino ang yung pinagkukunan ng lakas siya rin ang
+                                magiging dahilan ng iyong kahinaan, kung sino ang kasama mo sa pagbuo ng pangarap siya rin ang may kakayahang paguhuin ito anumangoras. <br> Hindi ba talaga natin ito maiiwasan? <br> Hindi
+                                ba sasapat ang inyong pagmamahalan para mapigilan ito?
+                            </p>
+                            <br>
+                            <p>
+                                Madalas tayong dayain ng ating mga mata, takaw-tingin ika nga; sinasabi nating "mahal kita" pero sa tuwing may nakikita tayong mas maganda/gwapo nabibighani naman tayo dito. Ipinapangako natin ang samahang walang iwanan sa hirap o ginhawa ngunit paano
+                                kung magkasakit at mawalan ng trabaho ang iyong asawa hindi kaba tatabangan sa inyong pagsasama? Sinasabi nating "mahal kita" pero kung matuklasan mong hindi siya pwedeng magkaanak hindi ba papasok sa isip mo ang magkaanak
+                                sa iba? Handa kang talikdan ang iyong pamilya para sa kanya pero paano kung wala na kayong makain hindi kaba manunumbat o makakaramdam ng labis-labis na pagsisisi? <br> Hanggang saan natin
+                                kayang ipaglaban ang ating pag-ibig?
+                                <br> Kailangan ba nating tikman ang pagkakamali para malaman natin kun sino ang tunay nating mahal?
+                            </p>
+                            <br>
+                            <p>
+                                MAHAL KITA. Isang maiksing pangungusap na maaaring makapagpabago ng matagal o habangbuhay sa iyong buhay. Napakadaling sabihin ito lalo't sa mga taong may kaaya-ayang atraksiyong pisikal ngunit paano kung dumating ang panahong hindi na siya maganda/gwapo?
+                                O natuklasan mong marami sa ugali niya ang hindi mo gusto? O mayroon siyang madilim at nakakahiyang nakaraan? O ang mga kaanak/pamilya niya ay hindi mo makasundo ang pag-uugali? O nawalan siya ng trabaho at mistula na siyang
+                                inutil sa paningin mo at ng maraming tao? O siya'y mangalunya sa higit na mas kaakit-akit kaysa sa iyo? O magkasakit siya ng malala at isa na siyang alagain at pabigat sa iyo at sa iyong pamilya? Kaya mo pa rin bang banggitin
+                                ang salitang "mahal kita"? O magdadalawang isip ka na dahil marami nang negatibong dahilang sagabal upang ito'y sambitin.
+                            </p>
+                            <br>
+                            <p>
+                                Ang katagang "Mahal Kita" ay hindi parang isang gift certificate na transferable, kung magsasabi ka ng mahal kita siguraduhin mong pag-ibig ang iyong nadarama. Ito ay sagrado na hindi dapat basta-basta binibigkas sa kung kanino lang kung ang layunin mo
+                                lang ay paglaruan ang damdamin ng iba at magsatisfy ang iyong pagnanasa. Nakakalungkot lang na patuloy itong inaabuso ng lahat ng uri ng tao; kabataan o may edad, mayaman o dukha, may pinag-aralan man o mangmang. Pag sinabing
+                                mong Mahal Kita siguraduhin mong may pagmamahal ka talagang nararamdaman dahil ang pag-ibig ay hindi natatapos sa dalawang salita na ito, habangbuhay itong commitment na iyong pangangatawanan sa kanya at sa mabubuo mong
+                                pamilya (Kung kayo ay magkakatuluyan).
+                            </p>
+                            <br>
+                            <p>
+                                MAHAL KITA, walang pero, walang subalit, walang pangako
+                            </p>
+                            <br>
+                            <p>
+                                <b>Walang pero.</b> Dahil ang pag-ibig ay hindi lumilingon sa nakaraan. Kung mahal mo ang isang tao hindi ka nanghuhusga base sa kanyang kahapon, kaya mo siyang tanggapin kung ano siya at ang kanyang pagkatao, kasama ng
+                                kanyang nakaraan at lahat ng kanyang kamalian. Kaya mo siyang ipaglaban sa kahit kaninong kaharap mo at ikaw ang unang-unang magtatanggol sa kanya sa oras na may mangyurak sa kanyang kapurian. Lahat ay may karapatang magbago
+                                wag tayong maging mapanghusga dahil lang sa isang madilim na kahapon at maling desisyon dahil ang tunay na pag-ibig ay hindi mapanghusga at malawak ang pang-unawa.
+                            </p>
+                            <br>
+                            <p>
+                                <b>Walang subalit.</b> Dahil ang pag-ibig ay hindi humahanap ng alibi. Kung mahal mo ang isang tao hindi ka dapat nagdadahilan kung nais mong sabihin ang nararamdaman mong ito kahit na ang posibleng katumbas nito'y pagkabigo
+                                o kasawian, kahit alangan ang sitwasyon mo o hindi pantay ang inyong estado o kalagayan sa buhay, kahit na tutol sa iyo ang kanyang pamilya. Sa aking pananaw, ang pagsasabi ng "Mahal Kita" ay hindi kahulugan na dapat ay
+                                gantihan ka rin ng pagmamahal sa taong sinabihan mo nito dahil ang tunay na pag-ibig ay marunong magparaya at magpakumbaba.
+                            </p>
+                            <br>
+                            <p>
+                                <b>Walang pangako.</b> Dahil lahat tayo ay may kakayahan at kapasidad na basagin ang isang pangako anumang oras, anumang pagkakataon. Huwag mong ipangako ang bituin kung hindi mo kayang abutin, gawin mo lang ang obligasyon
+                                mo at mahalin siya ng taos puso mo tiyak maiintindihan ka ng mahal mo. Huwag mong ipangako ang kayamanan dahil baka mabigo kang ibigay ito, sapat na ang magsikap ka at gawing inspirasyon ang kanyang pag-ibig sa'yo, mabigo
+                                ka man naipakita mong nagsikap ka at naging karapat-dapat ka sa kanyang pagmamahal. Hindi natin kailangang makarinig ng pangako o magbitaw ng isang pangako dahil kong tunay ang pag-ibig na inyong naramdaman, ang inyong
+                                pagmamahalan ang inyong magiging matibay na sandigan at tiyak na kayo'y magsasama nang higit pa sa inyong inaasahan.
+                            </p>
+                            <br>
+                            <p>
+                                Ang pag-ibig ay hindi usapin kung gaano kayo katagal na magkakilala, o gaano kayo kalayo sa isa't isa, hindi ito usapin kung gaano kayo katagal muling magkikita dahil ang tunay na pag-ibig ay marunong maghintay, may pagtitiwala at marunong magtiis para
+                                sa isang magandang bukas. <br> Ang Pag-ibig ay hindi paghahanap ng perpektong tao para sayo kundi ang pagtanggap niyo sa isa't isa na inyong kapintasan <br> Kung ang pag-ibig mo ay magreresulta
+                                sa isang magulo at kumplikadong sitwasyon na maaaring makasira ng isang napakagandang samahan o pagwasak ng isang relasyon o pamilya mas makabubuting hindi na ito isiwalat, dahil ang tunay na pag-ibig ay nakakaunawa at
+                                hindi makasarili. Ang kanyang kasiyahan ay kasiyahan mo na rin.
+                            </p>
+                            <br>
+                            <p>
+                                Maaring malupit ang mundo, ang taong mahal mo ay may mahal na iba habang ikaw ay nangangarap lang na balang araw na siya ay mapasaiyo, maaring ang taong mahal mo ay basura para sa iba ngunit kayamanan kung ito'y iyong ituring na higit pa sa luha ang gusto
+                                mong i-offer sa tuwing nakikita mo siyang nasasaktan at umiiyak. Ngunit hindi lahat ng gusto natin ay mangyayari, hindi sa lahat ng panahon ay sasang-ayon sa atin ang pagkakataon na kahit anong pagpupursigi mo ay hindi
+                                pa rin papabor sa iyo ang resulta. Ngunit kailangan mong gawin ito dahil ang tunay na pag-ibig ay hindi sisira ng buhay at pamilya at ang tunay na pag-ibig ay matapang na hinaharap ang kanyang kapalaran.
+                            </p>
+                            <br>
+                            <p>
+                                Hanggang saan ang kaya mong ibibgay para sa pag-ibig? <br> Hanggang saan ang kaya mong tiisin para sa pag-ibig? <br> Hanggang saan ang iyong pagpapakumbaba para sa pag-ibig? <br> Ilang pagsubok ang kaya mong lampasan para
+                                sa pag-ibig?
+                                <br> Ilang tukso ang kaya mong talikuran para sa pag-ibig? <br> Ilang pagpapatawad ang kaya mong ipataw para sa pag-ibig?
+                            </p>
+                            <br>
+                            <p>
+                                Ang pag-big ay pagtitiis ngunit hindi katumbas nito na ikaw ay magpakabayani at patuloy na mahalin ang taong iresponsable, walang pagpupursigi at walang pagsisikap upang mapaunlad ang inyong samahan at pamilya.
+                            </p>
+                            <br>
+                            <p>
+                                Ang pag-ibig ay pagpapakumbaba ngunit hindi ibig ipakahulugan nito na ikaw ay habangbuhay na magpapaalila at magbibigay sa lahat ng kanyang kagustuhan dahil kung tunay ang kanyang pag-ibig sa iyo dapat marunong din siyang magpakumbaba at umunawa dahil
+                                dapat ang pagmamahalan ay para sa DALAWA hindi sa isa lang.
+                            </p>
+                            <br>
+                            <p>
+                                Ang tunay na pag-ibig ay nagpapatawad ngunit hindi ibig sabihin nito na patuloy kang magpatawad para sa paulit-ulit na kasalanan. Ang paghingi ng tawad ay may kaakibat na pagsisisi at pagtanggap sa kamaliang nagawa at pangakong hindi na ulit ito mangyayari
+                                ngunit kung ilang beses nang inulit ang parehong pagkakasala parang kalokohan na lang ang pagpapatawad. Wag matakot at mabahala dahil may ibang taong mas karapat-dapat sa iyong pagmamahal.
+                            </p>
+                            <br>
+                            <p>
+                                Ang tunay na pag-ibig ay hindi sinusukat sa panahong kayo ay bata pa at maganda, hindi sa panahong kayo ay labis na masaya at masagana, hindi sa panahong pareho pang makinis ang inyong balat, hindi sa panahong masasarap pa ang inyong pagniniig sa gabi,
+                                hindi sa panahong wala ang mapanghalinang tukso at lalong hindi sa panahong wala kayong karamdaman at problema. <br> Dahil ang tunay na pag-ibig hindi lang puro sarap at kasiyahan kundi kasama
+                                rito ang hirap at kalungkutan. <br> Ang tunay na pag-ibig hindi nagugupo ng pagsubok, hindi pinagbabago ng panahon.
+                            </p>
+                            <br>
+                            <p>
+                                Maaring kulang at hindi pa sapat ang pagpapaliwanag at pagkakaunawa ko sa tunay na pag-ibig ngunit katulad nang sa Karagatan, ang pag-ibig ay malawak at walang eksaktong sukat, tulad nang sa karagatan minsan ito'y maalon kung minsan naman ay kalmado,
+                                minsan kasiyahan ang dulot minsan naman ay makadarama ka ng labis na lungkot.
+                            </p>
+                            <br><br>
+                            <p>
+                                <span>Labels:</span>
+                                <i>Inspirasyon</i>
+                                <i>Kahulugan</i>
+                                <i>Pag-ibig</i>
+                                <i>Pagmamahal</i>
+                                <i>Pagtitiis</i>
+                                <i>Sakripisyo</i>
+                                <i>True Love</i>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="welcome" class="">
+                        <h3>WELCOME</h3>
+                        <h5>To My Web Val !!! <br> (Via Anthonette P. Lopez)</h5>
+                        <br><br><br>
+                        <h5> Happy Valentines Day ! <br><br> 💚💛🧡</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="./assets/js/jquery-1.7.2.min.js"></script>
+    <script src="./assets/js/materialize.min.js"></script>
+    <script>
+        function openCity(evt, cityName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tabcontent.length; i++) {
+                tablinks[i].classList.remove("active");
+                document.getElementById("welcome").style.display = "none";
+            }
+
+            // Show the current tab, and add an "active" class to the link that opened the tab
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+
+        // $(document).ready(() => {
+
+        //     $('#btn_more').on('click', () => {
+        //         $('#more').show(500);
+        //         $('#btn_more').hide();
+        //         $('#btns').css({
+        //             "display": "flex"
+        //         });
+        //     })
+
+        // })
+    </script>
+</body>
+
+</html>
